@@ -8,15 +8,16 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #080808;
-    color: #fff;
+    background: #EEF4FC;
+    color: #000;
 }
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(./images/bg.png);
+    /* background-image: url(./images/bg.png); */
     background-size: cover;
     background-position: center;
+    z-index: 100;
 }
 .container{
     padding: 10px 10%;
@@ -40,21 +41,21 @@ nav ul li{
 
 }
 nav ul li a{
-    color:#fff;
+    color: #000;;
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
 nav ul li a:hover{
     nav ul li a:hover {
-        color: #ff004f; 
+        color: #FEC233; 
     }
 }
 nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f; 
+    background: #FEC233; 
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -74,12 +75,13 @@ nav ul li a:hover::after{
 
 }
 .header-text h1 span{
-    color: #ff004f;
+    color: #FEC233;
 }
 /* ABOUT */
 #about{
     padding: 80px 0;
     color: #ababab;
+    background-color: #000;
 }
 .row{
     display: flex;
@@ -100,7 +102,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size:60px;
     font-weight: 600;
-    color: #fff;
+    color: #000;
 }
 .tab-titles{
     display: flex;
@@ -133,7 +135,7 @@ nav ul li a:hover::after{
 
 }
 .tab-contents ul li span{
-    color: #fb5469;
+    color: #FEC233;
     font-size: 14px;
 }
 .tab-contents {
@@ -153,7 +155,7 @@ nav ul li a:hover::after{
     margin-top: 50px;
 }
 .services-list div{
-    background:#262626 ;
+    background:#ffffff ;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -172,13 +174,13 @@ nav ul li a:hover::after{
 }
 .services-list div a{
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: #FEC233;
     transform: translateY(-10px);
 }
 
@@ -220,7 +222,7 @@ nav ul li a:hover::after{
     text-align: center;
     font-size: 14px;
     transition: 0.5s;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #FEC233);
 }
 .layer h3{
     font-weight: 500;
@@ -229,11 +231,11 @@ nav ul li a:hover::after{
 }
 .layer a {
     margin-top: 20px;
-    color: #ff004f;
+    color: #FEC233;
     font-size: 18px;
     text-decoration: none;
     line-height: 60px;
-    background: #fff;
+    background: #000;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -250,15 +252,15 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #FEC233;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #000;
     transition: background 0.5s;
 }
 .btn:hover{
-    background-color: #ff004f;
+    background-color: #FEC233;
 }
 
 /* Contact */
@@ -274,7 +276,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #ff004f;
+    color: #FEC233;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -290,19 +292,45 @@ nav ul li a:hover::after{
     transition: transform 0.5s  ;
 
 }
-.social-icons a:hover{
-    color: #ff004f;
+/* .social-icons a:hover{
+    color: #FEC233;
+    transform: translateY(-5px);
+} */
+.social-icons a:hover:first-child{
+    color: #0082fb;
     transform: translateY(-5px);
 }
+.social-icons a:hover:nth-child(2){
+    color: #1DA1F2;
+    transform: translateY(-5px);
+}
+.social-icons a:hover:nth-child(3){
+    color: #0077B5;
+    transform: translateY(-5px);
+}
+.social-icons a:hover:nth-child(4){
+    color: transparent;
+  background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045
+  );
+  -webkit-background-clip: text;
+    transform: translateY(-5px);
+}
+
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
-    color: #fff;
+    background: #FEC233;
+    color: #000;
     transition:transform 0.5s;
+    font-weight: 600;
+}
+.btn2{
+    margin-left:15px;
 }
 .btn.btn2:hover{
     background: none;
-    color: #ff004f;
+    color: #FEC233;
 }
 .contact-right form{
     width: 100%;
@@ -312,29 +340,18 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: #fff;
+    border:1px solid rgb(175, 174, 174);
     padding: 15px;
     margin: 15px;
-    color: #fff;
+    color: #000;
     font-size: 18px;
     border-radius: 6px;
 }
 form btn2{
     padding: 14px 60px;font-size: 18px;
     margin-top: 18px;
-    margin-top: 20px;
     cursor: pointer;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0px;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.copyright i{
-    color: #ff004f;
 }
 
 /* CSS FOR SMALL SCREEN */
@@ -343,7 +360,31 @@ nav .fas{
 }
 #email, #whatsapp{
     
-    color: #fff;
+    color: #000;
+}
+.images{
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    right: 70px;
+    top: 60px; 
+}
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s left 1s;
+}
+.images:hover .shape{
+    bottom: 40px;
+    transition: ease-in-out 1s;
+}
+
+.images:hover .avatar{
+    left: 45%;
+    transition: ease-in-out 1s;
 }
 
 @media only screen and (max-width: 600px){
@@ -365,7 +406,7 @@ nav .fas{
     font-size: 25px;
     }
     nav ul {
-        background-color: #ff004f;
+        background-color: #FEC233;
         position: fixed;
         top: 0;
         right: -200px;
